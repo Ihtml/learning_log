@@ -1,0 +1,22 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.pyc
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+__pycache__
+*.sqlite3
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
+.idea
+.DS_Store
