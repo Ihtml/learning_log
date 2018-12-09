@@ -1,0 +1,21 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block conent %}
+    <p>Topic: {{ topic }}</p>
+
+    <p>Entries:</p>
+    <ul>
+    {% for entry in entries %}
+        <li>
+{#            模板过滤器，表示以 January 1，2018 12：30格式显示时间戳#}
+            <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+            <p>{{ entry.text|linebreaks }}</p>
+        </li>
+        {% empty %}
+        <li>
+            There are no entries for this topic yet.
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock conent %}
