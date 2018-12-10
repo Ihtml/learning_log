@@ -1,6 +1,6 @@
 {% extends 'learning_logs/base.html' %}
 
-{% block conent %}
+{% block content %}
     <p>Topics</p>
     <ul>
         {% for topic in topics %}
@@ -11,4 +11,6 @@
             <li>No topics have been added yet.</li>
         {% endfor %}
     </ul>
-{% endblock conent %}
+
+    <a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a>
+{% endblock content %}
