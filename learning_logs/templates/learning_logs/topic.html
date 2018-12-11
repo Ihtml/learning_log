@@ -13,6 +13,9 @@
 {#            模板过滤器，表示以 January 1，2018 12：30格式显示时间戳#}
             <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
             <p>{{ entry.text|linebreaks }}</p>
+            <p>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a>
+            </p>
         </li>
         {% empty %}
         <li>
